@@ -3,6 +3,7 @@ layout: post
 title:  "Introduction to Time Complexity - Part 1"
 date:   2025-05-02 10:52:50 +0200
 categories: jekyll update
+image_path: /assets/images/2025-05-02-introduction-to-time-complexity-part-1
 ---
 
 {::comment}
@@ -59,7 +60,7 @@ Usually when we write a piece of code, we want it to do different things dependi
 
 This piece of code calculates the value of $$i+5$$ for every number $$i$$ between $$0$$ and $$n$$. If $$n$$ is very small, this code has to do very few calculations. But if $$n$$ is big, the number of calculations increases as well. One way to study this, is to make a graph. Along the x-axis we will put $$n$$, the input size. And along the y-axis we will measure the time taken to run the code. Since computers are very fast, and small times are very hard to measure, we will re-run the code 100000 times for each value on $$n$$. That way we can be sure that we get accurate results. See the graph below:
 
-![O(n) example image](o_n_example.png){: width="400px"}
+<img src="{{ page.image_path }}/o_n_example.png" alt="O(n) example image">
 
 > The little peaks in the graph are from noise. While in theory computers are deterministic, in practice they are not! Little things like the temperature, energy supply, and processes running in the background can all have an effect on the time it takes to do a calculation. For our purposes this is not a huge issue; if we just run the code often enough, these will average out, and we can get a graph that is close to a smooth curve.
 
@@ -152,7 +153,7 @@ Let's do another example. Again, we will plot the runtime of the code against th
     n = 100
     o_n2_func(n)
 
-![O(n2) example image](o_n2_example.png){: width="400px"}
+<img src="{{ page.image_path }}/o_n2_example.png" alt="O(n^2) example image">
 
 As you can see in the graph, the execution time of the code looks like a quadratic function. Every time we double the input size $$n$$, the time taken to run the code goes up by a factor 4. This is because of the nested loop in the code. Every time the inner loop happens, we calculate $$n$$ different values. And every time the outer loop happens, it runs the inner loop $$n$$ times. This means the calculation of $$x$$ happens $$n * n = n^2$$ times. We say that this code has quadratic time complexity. We write this in big-O notation as: the code has time complexity $$O(n^2)$$.
 
@@ -166,7 +167,7 @@ In the previous sections we saw examples where the run-time depended on the inpu
     n = 100
     o_1_func(n)
 
-![O(1) example image](o_1_example.png){: width="400px"}
+<img src="{{ page.image_path }}/o_1_example.png" alt="O(1) example image">
 
 We see that the code roughly takes the same amount of time whenever we run it. Therefore, the time it takes is "constant"; it doesn't change depending on $$n$$. In this case we say this code has a "constant" time complexity. We write this in big-O notation as: the code has time complexity $$O(1)$$.
 
