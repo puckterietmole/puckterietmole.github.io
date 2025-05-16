@@ -21,10 +21,11 @@
 title: Puck te Rietmole
 #email: your-email@example.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Hello, thanks for checking out my website!
-  I'm a big nerd with a background in mathematics and programming, and a love for
+  I'm a big nerd with a background in mathematics, physics, and programming, and a love for
   teaching and science communication. This website is where I showcase some of the things
-  I've been working on! (I give no permission for scraping this website or any data on it, including but not limited to for the purposes of training AI.)
+  I've been working on!
+  
+  (I give no permission for scraping this website or any data on it, including but not limited to for the purposes of training AI.) Copyright Puck te Rietmole, 2025.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 #twitter_username: jekyllrb
